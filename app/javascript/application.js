@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Greeting from './components/greeting';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
-  return (<h1>TE AMO MI COSHA PELUA</h1>);
+  return (
+    <div>
+      <Provider store={store}>
+        <Greeting/>
+      </Provider>
+    </div>
+  );
 }
 
 ReactDOM.render(
